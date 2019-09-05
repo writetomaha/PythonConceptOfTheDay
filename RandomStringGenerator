@@ -1,0 +1,36 @@
+
+import string
+import random
+
+
+def random_string_upper_case(string_length):
+    """Generate a random string with the uppercase letters of fixed length"""
+
+    letters = string.ascii_uppercase
+    return ''.join(random.choice(letters) for i in range(string_length))
+
+
+def random_string_lower_case(string_length):
+    """Generate a random string with the lowercase letters of fixed length"""
+
+    letters = string.ascii_lowercase
+    return ''.join(random.choice(letters) for i in range(string_length))
+
+
+def random_string(string_length):
+    """Generate a random string with the combination of lowercase and uppercase letters of fixed length"""
+
+    letters = string.ascii_letters
+    return ''.join(random.choice(letters) for i in range(string_length))
+
+
+def random_string_with_digits(string_length):
+    """Generate a random string with digits"""
+    letters = string.ascii_letters + string.digits
+    return ''.join(random.choice(letters) for i in range(string_length))
+
+
+def random_password(string_length):
+    """Generate a random password with combinations of letters, digits and punctuation"""
+    password_characters = string.ascii_letters + string.digits + string.punctuation
+    return ''.join(random.choice(password_characters) for i in range(string_length))
